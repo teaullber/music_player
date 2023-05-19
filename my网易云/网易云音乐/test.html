@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+<script>
+    window.onload = function () {
+        axios.defaults.baseURL = 'http://1.13.2.68:3000';
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        var btn4 = document.getElementById('btn4');
+        var btn5 = document.getElementById('btn5');
+        var btn6 = document.getElementById('btn6');
+        var btn7 = document.getElementById('btn7');
+        btn1.onclick = function () {
+            axios.get('/banner', {
+                type: 0,
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn2.onclick = function () {
+            axios.post('/top/playlist/highquality', {
+                uid: 32953014,
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn3.onclick = function () {
+            axios.get('/top/playlist', {
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn4.onclick = function () {
+            axios.post('/playlist/track/all', {
+                id: 3779629,
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn5.onclick = function () {
+            axios.post('/song/url', {
+                id: 36024919,
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn6.onclick = function () {
+            axios.post('/album/new', {
+                limit: 10,
+                offset: 1
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+        btn7.onclick = function () {
+            axios.post('/toplist', {
+            }).then(function (value) {
+                console.log(value);
+            })
+        }
+
+    }
+</script>
+
+<body>
+    <button id="btn1">按钮_获取banner封面</button>
+    <button id="btn2">按钮_获取精品歌单</button>
+    <button id="btn3">歌单(网友精选碟)</button>
+    <button id="btn4">获取歌单详情</button>
+    <button id="btn5">获取音乐URL</button>
+    <button id="btn6">新碟上架</button>
+    <button id="btn7">所有榜单</button>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+#MusicPlayer_musicPlayer {
+    height: 20px;
+    width: 40px;
+    margin: 0 9px;
+    border-radius: 8px;
+    position: absolute;
+    right: 2px;
+    background-color: #00000010;
+    transition: all .3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#MusicPlayer_musicPlayer:hover {
+    width: 300px;
+    height: 40px;
+    background-color: #00000033;
+}
+
+#MusicPlayer_musicPlayer #progressBar_musicPlayer {
+    height: 100%;
+    width: 0;
+    background-color: rgb(0, 235, 35);
+}
+
+#MusicPlayer_musicPlayer:hover #progressBar_musicPlayer {
+    background-color: rgb(68, 255, 0);
+}

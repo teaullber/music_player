@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-decoration: none;
+}
+
+.toplist{
+    min-height: 700px;
+    width: 980px;
+    height: 6455px;
+    font-size: 12px;
+    margin: auto;
+    border: 1px solid #d3d3d3;
+}
+
+
+/* 左侧 */
+.toplist-aside{
+    float: left;
+    width: 240px;
+    /* background-color: #d3d3d3; */
+    cursor: pointer;
+    height: 6455px;
+    position: absolute;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.toplist-aside-main{
+    margin-top: 40px;
+}
+
+.feature-list{
+    padding: 0 10px 12px 15px;
+    color: #000;
+}
+
+/* .feature-list-ul{
+
+} */
+
+.list-li{
+    padding: 10px 0 10px 20px;
+    position: relative;
+    height: 42px;
+}
+
+.list-li:hover{
+    background-color: #e6e6e6;
+}
+
+.list-item-biaosheng{
+    background-color: #e6e6e6;
+}
+
+.list-item{
+    padding-left: 50px;
+}
+
+.list-item-left{
+    display: inline;
+    float: left;
+    margin-left: -50px;
+    overflow: hidden;
+    width: 40px;
+}
+
+.list-item-imga{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.list-item-imga img{
+    width: 40px;
+    height: 40px;
+}
+
+.list-item-imga-span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: -310px -330px;
+}
+
+.list-item-name{
+    width: 150px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+/* .list-item-namea{
+
+} */
+
+.list-name-state{
+    color: #999;
+}
+
+
+
+
+/* 右侧 */
+.toplist-right{
+    height: 100%;
+    float: right;
+    width: 740px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* .toplist-right-main{
+
+} */
+
+.list-songlist{
+    padding: 0 30px 40px 40px;
+}
+
+.list-songlist-text{
+    height: 33px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.list-songlist-text h3{
+    font-size: 20px;
+    line-height: 28px;
+    float: left;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    color: #333;
+    font-weight: normal;
+}
+
+.songlist-nums{
+    margin: 9px 0 0 20px;
+    float: left;
+    color: #666;
+}
+
+.songlist-bofang{
+    margin-top: 5px;
+    float: right;
+    color: #666;
+}
+
+.songlist-bofang-text{
+    color: #c20c0c;
+}
+
+.songlist-inner-table{
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    table-layout: fixed;
+}
+
+.songlist-inner-table th{
+    height: 38px;
+    background-color: #f7f7f7;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+
+    vertical-align: top;
+    text-align: left;
+    font-weight: normal;
+    color: #666;
+}
+
+.songlist-inner-table th,.songlist-inner-table th .wp{
+    background: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+}
+
+.th1{
+    width: 77px;
+}
+
+.wp{
+    height: 18px;
+    line-height: 18px;
+    padding: 8px 10px;
+    /* 边缘 */
+    background-position: 0 -56px;
+}
+
+.th3{
+    width: 91px;
+}
+
+.th4{
+    width: 26%;
+}
+
+
+
+/* tbody */
+.tbody-tr{
+    height: 18px;
+}
+
+.tbody-tr:hover .td3-hour{
+    display: none;
+}
+
+.tbody-tr:hover .opt-show{
+    display: block;
+    float: left;
+    opacity: 1;
+}
+
+.tbody-tr0:hover .td3-hour{
+    display: none;
+}
+
+.tbody-tr0:hover .opt-show{
+    display: block;
+    float: left;
+    opacity: 1;
+}
+
+.list-songlist-inner td{
+    cursor: pointer;
+    padding: 6px 10px;
+    line-height: 18px;
+    background-color: #f7f7f7;
+}
+
+
+.hd-and-rk{
+    height: 18px;
+}
+
+.td1-nums{
+    float: left;
+    width: 25px;
+    margin-left: 0;
+    text-align: center;
+    color: #999;
+}
+
+.rk{
+    float: right;
+    width: 32px;
+    margin-right: -5px;
+    text-align: center;
+}
+
+/* new的样式 */
+.rk-span-img-new{
+    display: block;
+    float: none;
+    margin: auto;
+    margin-top: 1px;
+    padding-left: 0;
+    background-image:url(https://s2.music.126.net/style/web2/img/icon.png?de28704121d91fdf93468f40a2caeedf) ;
+    width: 16px;
+    height: 17px;
+    background-position: -67px -283px;
+}
+
+.td2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.td2inner{
+    float: left;
+    width: 100%;
+}
+
+.td2-img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+}
+
+.td2-bofang{
+    margin-top: 17px;
+    margin-right: 8px;
+    float: left;
+    width: 17px;
+    height: 17px;
+
+    background-image:url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+    background-position: 0 -103px;
+}
+
+.td2-bofang:hover{
+    background-image:url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+    background-position: 0 -128px;
+}
+
+.td2-bofang2{
+    margin-right: 8px;
+    float: left;
+    width: 17px;
+    height: 17px;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+    background-position: 0 -103px;
+}
+
+.td2-bofang2:hover{
+    background-image:url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+    background-position: 0 -128px;
+}
+
+.td2-divtext{
+    margin-top: 16px;
+    margin-right: 20px;
+    height: 18px;
+}
+
+.td2-divtext-2{
+    margin-right: 20px;
+    height: 18px;
+}
+
+.td2-spantext{
+    max-width: 67%;
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    margin-right: -25px;
+    height: 20px;
+    overflow: hidden;
+    color: #333;
+}
+
+.td2-spantext-a{
+    color: #333;
+}
+
+.td2-spantext-a:hover{
+    text-decoration: underline;
+}
+
+.td3-hour{
+    color: #666;
+}
+
+/* .td3-hour:hover{
+    display: none;
+} */
+
+.opt-show{
+    position: absolute;
+    /* display: none; */
+    float: left;
+    opacity: 0;
+    margin-top: -8px;
+}
+
+/* .opt-show:hover{
+    display: block;
+    float: left;
+    opacity: 1;
+} */
+
+.opt-show-bofang{
+    float: left;
+    margin-top: 2px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/icon.png?de28704121d91fdf93468f40a2caeedf);
+    background-position: 0 -700px;
+}
+
+.opt-show-bofang:hover{
+    float: left;
+    margin-top: 2px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/icon.png?de28704121d91fdf93468f40a2caeedf);
+    background-position: -22px -700px;
+}
+
+.opt-show-shoucang{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+    background-position: 0 -174px;
+}
+
+.opt-show-shoucang:hover{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+    background-position: -20px -174px;
+}
+
+.opt-show-fenxiang{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+    
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+    background-position: 0 -195px;
+}
+
+.opt-show-fenxiang:hover{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+    
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+    background-position: -20px -195px;
+}
+
+.opt-show-xiazai{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02);
+    background-position: -81px -174px;
+}
+
+.opt-show-xiazai:hover{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 4px;
+    cursor: pointer;
+    overflow: hidden;
+
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+    background-position: -104px -174px;
+    background-repeat: no-repeat;
+}
+
+/* .opt-show span{
+    background-image: url(https://s2.music.126.net/style/web2/img/table.png?a0ac07e937362691645095fd68843f02) ;
+} */
+
+.td4-divtext{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.td4-spantext-a{
+    color: #333;
+}
+
+.td4-spantext-a:hover{
+    text-decoration: underline;
+}

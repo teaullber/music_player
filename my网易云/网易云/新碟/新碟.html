@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新碟上架</title>
+    <link rel="stylesheet" href="./新碟.css">
+    <link crossorigin="anonymous" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/boots">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false">
+    <div id="outer">
+        <div id="container">
+
+            <!-- 热门新碟 -->
+            <div id="hotDishes">
+                <!-- 热门新碟头部 -->
+                <div id="headerHot">
+                    <div id="hotTitle">
+                        <span>热门新碟</span>
+                    </div>
+                </div>
+                <!-- 热门新碟 -->
+                <main id="hotDish">
+                </main>
+            </div>
+
+            <!-- 全部新碟 -->
+            <div id="allDishes">
+                <!-- 全部新碟头部 -->
+                <div id="headerAll">
+                    <div id="allTitle">
+                        <span>全部新碟</span>
+                        <!-- 新碟种类 -->
+                        <ul id="dishTypes">
+                            <li id="typeALL">全部</li>
+                            <li id="typeZH">华语</li>
+                            <li id="typeEA">欧美</li>
+                            <li id="typeKR">韩国</li>
+                            <li id="typeJP">日本</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 全部新碟 -->
+                <main id="allDish">
+                </main>
+            </div>
+
+            <!-- 底部换页 -->
+            <div id="footer">
+                <div id="pages">
+                    <a href="javascript:;" id="pagePrev">◁ 上一页</a>
+                    <div id="pageList">
+                        <a href="javascript:;" class="page" number="0">1</a>
+                        <a href='javascript:;' class='page' number='1'>2</a>
+                        <a href="javascript:;" class="page" number="2">3</a>
+                        <a href="javascript:;" class="page" number="3">4</a>
+                        <a href="javascript:;" class="page" number="4">5</a>
+                        <a href="javascript:;" class="page" number="5">6</a>
+                        <a href="javascript:;" class="page" number="6">7</a>
+                        <a href="javascript:;" class="page" number="7">8</a>
+                        <!-- <span id="dots">...</span> -->
+                        <a href="javascript:;" class="page" number="8">9</a>
+                        <a href="javascript:;" class="page" number="9">10</a>
+                        <a href="javascript:;" class="page" number="10">11</a>
+                        <a href="javascript:;" class="page" number="11">12</a>
+                    </div>
+                    <a href="javascript:;" id="pageNext">下一页 ▷</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./新碟.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* 外部(灰色背景) */
+#outer{
+    width: 100%;
+    height: 100%;
+    min-width: 1600px;
+    min-height: 1743px;
+    display: flex;
+    justify-content: center;/*正文居中*/
+    background-color: #F5F5F5;
+}
+/* 中间正文 */
+#container{
+    width: 900px;
+    height: 1703px;
+    padding: 30px 35px;
+    background-color: white;
+}
+
+/* 热门新碟 */
+#hotDishes{
+    width: 900px;
+    height: 470px;
+
+}
+/* 热门新碟头部 */
+#headerHot{
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0;
+    border-bottom: 2px solid #c20c0c;
+}
+#hotTitle{
+    width: 151px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+#hotTitle>span{
+    font-size: 24px;
+    color: black;
+}
+
+#hotDish{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 新碟 */
+.dish{
+    width: 156px;
+    height: 178px;
+    margin: 10px;
+}
+.dishLink{
+    width: 153px;
+    height: 130px;
+    display: block;
+    position: relative;
+}
+
+/* 鼠标移入显示解释文字 */
+.dishMouse{
+    width: fit-content;
+    height: fit-content;
+    font-size: 14px;
+    font-weight: 100;
+    color: #333333;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.play{
+    position: absolute;
+    display: none;
+    left: 94px;
+    bottom: 5px;
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+}
+.dishLink:hover .play{
+    display: block;
+}
+.play:hover{
+    opacity: 0.7;
+}
+.dishImg{
+    width: 136px;
+    height: 130px;
+    position: relative;
+}
+.dishImgHide{
+    width: 160px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.dishImgHide>img{
+    width: 162px;
+    height: 130px;
+}
+.dishUp{
+    width: 153px;
+    height: 130px;
+}
+.dishDown{
+    width: fit-content;
+    height: 48px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dishTitle{
+    width: fit-content;
+    height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    color: black;
+}
+/* 鼠标移入显示解释文字 */
+.dishTitleMouse{
+    font-size: 14px;
+    font-weight: 100;
+    color: #333333;
+    background-color: white;
+    position: absolute;
+}
+.dishTitle:hover{
+    text-decoration: underline;
+}
+.dishWriter{
+    width: fit-content;
+    height: 18px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666666;
+}
+.dishWriter:hover{
+    text-decoration: underline;
+}
+
+/* 全部新碟 */
+#allDishes{
+    width: 900px;
+    height: 1500px;
+}
+/* 全部新碟头部 */
+#headerAll{
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 2px solid #c20c0c;
+}
+#allTitle{
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+#allTitle>span{
+    font-size: 24px;
+    color: black;
+}
+#dishTypes{
+    width: 300px;
+    height: 16px;
+    margin: 8px 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+#dishTypes>li{
+    width: 100px;
+    color: #666666;
+    font-size: 12px;
+    border-right: 1px solid #a9a9a9;
+    margin: 0 10px;
+}
+#dishTypes>li:last-child{
+    border-right: none;
+}
+#dishTypes>li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* 全部新碟 */
+#allDish{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 播放按钮 */
+.playMove{
+    opacity: 1;
+}
+
+
+/* 换页 */
+#footer{
+    width: 900px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+}
+#pages{
+    width: 900px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pageList{
+    width: 500px;
+    height: 26px;
+    display: flex;
+}
+#pagePrev{
+    width: 60px;
+    height: 20px;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #333333;
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#pageNext{
+    width: 60px;
+    height: 20px;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #333333;
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.page{
+    width: 30px;
+    height: 20px;
+    font-size: 13px;
+    padding: 3px;
+    margin: 0 5px;
+    text-align: center;
+    color: #333333;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.page:hover{
+    border: 1px solid black;
+}
+#pagePrev:hover{
+    background-color: rgba(248, 248, 248, 0.4);
+}
+#pageNext:hover{
+    background-color: rgba(248, 248, 248, 0.4);
+}
+
+.pageActive{
+    color: white;
+    background-color: rgb(220, 23, 23);
+}

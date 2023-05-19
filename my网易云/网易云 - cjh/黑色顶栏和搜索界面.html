@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑色顶栏</title>
+    <script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+    <link rel="stylesheet" href="./css/黑色顶栏.css">
+    <link rel="stylesheet" href="./css/搜索界面.css">
+    <link rel="stylesheet" href="./css/回到顶栏.css">
+    <link rel="stylesheet" href="./css/播放器.css">
+    <!-- 清除全部样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+
+    <!-- 黑色顶栏 -->
+    <div id="blackHead">
+        <!-- 限制内部宽度 -->
+        <div id="widthLimitBlackHead">
+            <!-- logo -->
+            <h1 id="logoLi_blackHead">
+                <div id="logoPhoto_blackHead"></div><a hidefocus="true" href=""></a>
+            </h1>
+            <!-- 几个可选项 -->
+            <ul id="inWidthLimitBlackHeadUl_blackHead">
+                <li><span>发现音乐</span></li>
+                <li><span>我的音乐</span></li>
+                <li><span>关注</span></li>
+                <li><span>商城</span></li>
+                <li><span>音乐人</span></li>
+                <li><span>下载客户端</span></li>
+                <div id="hot_blackHead">HOT</div>
+            </ul>
+            <!-- 搜索框 -->
+            <div id="inputDiv_blackHead">
+                <!-- 搜索框边缘 -->
+                <div id="edgeInput_blackHead">
+                    <span id="signInInput_blackHead"><i class="fa fa-search" id="searchInInput_blackHead"></i></span>
+                    <span id="textInInput_blackHead">音乐/视频/电台/用户</span>
+                    <input type="text" id="inputInInput_blackHead">
+                </div>
+                <!-- 搜索框推荐栏 -->
+                <div id="recommendInInput_blackHead">
+                    <div id="beginSearch_blackHead"><!-- 这里放'搜索“---”相关音乐' --></div>
+                    <div id="recommend_blackHead">
+                        <p><i class="fa fa-music"></i>单曲</p>
+                        <div id="songInRecommend_blackHead">
+                            <ul id="songsInSearch_blackHead">
+                                <li class="inSongsInSearch_blackHead">
+                                    <p class="theSong1"></p>
+                                    <p class="theSong2"></p>
+                                    <p class="theSong3"></p>
+                                </li>
+                                <li class="inSongsInSearch_blackHead">
+                                    <p class="theSong1"></p>
+                                    <p class="theSong2"></p>
+                                    <p class="theSong3"></p>
+                                </li>
+                                <li class="inSongsInSearch_blackHead">
+                                    <p class="theSong1"></p>
+                                    <p class="theSong2"></p>
+                                    <p class="theSong3"></p>
+                                </li>
+                                <li class="inSongsInSearch_blackHead">
+                                    <p class="theSong1"></p>
+                                    <p class="theSong2"></p>
+                                    <p class="theSong3"></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 创作者中心 -->
+            <div id="creatorCenter_blackHead">
+                创作者中心
+            </div>
+            <!-- 登录 -->
+            <div id="login_blackHead">
+                <a id="noLogin_blackHead">登录</a>
+                <div id="yesLogin_blackHead">
+                    <img src="" alt="" id="userHead_blackHead" onclick="console.log(cookie);">
+                    <div id="dropDownMenu_blackHead">
+                        <ul id="inDropDownMenuUl_blackHead">
+                            <li><i class="fa fa-user-o"></i><span>我的主页</span></li>
+                            <li><i class="fa fa-envelope-o"></i><span>我的消息</span></li>
+                            <li><i class="fa fa-wheelchair-alt"></i><span>我的等级</span></li>
+                            <li><i class="fa fa-diamond"></i><span>VIP会员</span></li>
+                            <li><i class="fa fa-cog"></i><span>个人设置</span></li>
+                            <li><i class="fa fa-check-circle-o"></i><span>实名认证</span></li>
+                            <li id="signOut_blackHead"><i class="fa fa-power-off"></i><span>退出</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录界面 -->
+    <div id="toLogin_login">
+        <div id="loginInThere_login">
+            <div id="title_login">
+                <p>登录</p>
+                <div id="giveUpLogin_login" onclick="closeLogin_login();"><i class="fa fa-times"></i></div>
+            </div>
+            <div id="phoneCaptcha_login">
+                <span class="spanInPhoneCaptcha_login">请输入手机号</span>
+                <input type="text" id="phoneNumber_login">
+                <span class="spanInPhoneCaptcha_login">请输入验证码</span>
+                <input type="text" id="captchaNumber_login">
+                <!-- 当这两个按钮获取到
+                class='okYouCanClickThis_login'时，有点击效果 -->
+                <div id="verificationCode_login">获取验证码</div>
+                <div id="ClickMeToSign_login">登 录</div>
+                <p id="to_QR_code_login">二维码登录</p>
+                <p id="unequalTreaties" onclick="alert('点我干什么\n我这又没东西\n大厦B');">登录即表示您接受我们的<br>《服务条款》《隐私政策》《儿童隐私政策》</p>
+            </div>
+            <div id="QR_code_login">
+                <img src="" id="haveQR_codePhoto_login">
+                <p id="textInQR_code_login">点击二维码刷新二维码</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 搜索界面 -->
+    <div id="searchInterface_search">
+        <!-- 搜索框 -->
+        <div id="inSearchInterface_search">
+            <!-- 输入框 -->
+            <div id="searchBox_search">
+                <input type="text" id="inSearchBox_search">
+            </div>
+            <!-- 搜索键 -->
+            <div id="searchKey_search">
+                <i class="fa fa-search" id="inSearchKey_search"></i>
+            </div>
+        </div>
+
+        <!--  歌曲数量 -->
+        <div id="songsCount_search">
+            <p class="inSongsCount_search"></p>
+            <p class="inSongsCount_search RedInSongsCount_search"></p>
+            <p class="inSongsCount_search"></p>
+        </div>
+
+        <!-- 单曲 -->
+        <div id="allSong_search">
+            <ul id="songList_search">
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+                <li class="inSongList_search">
+                    <div><i class="fa fa-play-circle-o"></i>
+                        <p class="songName_search"></p>
+                        <i class="fa fa-user-o"></i>
+                        <p class="songAuthor_search"></p>
+                        <i class="fa fa-th-list"></i>
+                        <p class="playList_search"></p>
+                        <p class="songTime_search"></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 选页 -->
+        <div id="pageNumber_search">
+            <!-- 当处于首、尾页时
+                给上、下一页添加class="stopLeftAndRightPage_search"
+                使得该按钮不可用 -->
+            <a href="#blackHead" id="previousPageNumber_search" class="LeftAndRightPage_search"><i
+                    class="fa fa-angle-left"></i>上一页</a>
+            <!-- 当当前页面被选中时
+                给它添加 class="PageButSelected_search"  -->
+            <div id="number_search">
+            </div>
+            <a href="#blackHead" id="nextPageNumber_search" class="LeftAndRightPage_search">下一页<i
+                    class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+
+
+    <!-- 回到顶栏 -->
+    <!-- 还有音乐播放器 -->
+    <div id="backToHead_backHead">
+        <div id="backTop_backHead"><a href="#blackHead"><i class="fa fa-sort-asc"></i></a></div>
+        <div id="MusicPlayer_musicPlayer">
+            <div id="progressBar_musicPlayer"></div>
+        </div>
+    </div>
+
+    </div>
+    <audio src="https://music.163.com/song/media/outer/url?id=32857333.mp3" id="music1_musicPlayer" loop></audio>
+
+    <script src="./js/黑色顶栏.js"></script>
+    <script src="./js/搜索界面.js"></script>
+    <script src="./js/播放器.js"></script>
+</body>
+
+</html>

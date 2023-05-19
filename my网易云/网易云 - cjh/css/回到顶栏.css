@@ -1,0 +1,32 @@
+#backToHead_backHead {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 120px;
+    right: 100px
+}
+
+#backToHead_backHead #backTop_backHead {
+    width: 40px;
+    height: 40px;
+    margin: 9px;
+    background-color: #00000010;
+    border-radius: 8px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#backToHead_backHead #backTop_backHead a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
+#backToHead_backHead #backTop_backHead:hover {
+    background-color: #00000033;
+}

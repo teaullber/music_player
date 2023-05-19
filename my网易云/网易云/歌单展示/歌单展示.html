@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌单详情</title>
+    <link rel="stylesheet" href="./歌单展示.css">
+    <link crossorigin="anonymous" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/boots">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false">
+    <div id="outer">
+        <div id="container">
+            <div id="dishShowUp">
+                <div class="showUpLeft">
+                    <img src="" alt="" id="dishShowImg">
+                </div>
+                <div class="showUpRight">
+                    <h1 id="showTitle"></h1>
+                    <div class="showInfo">
+                        <img src="" alt="" id="showAuthorImg">
+                        <span id="showAuthor"></span>
+                        <img src="" alt="" id="grade">
+                        <span id="showDate"></span>
+                    </div>
+                    <div class="showButton">
+                        <!-- 播放按钮 -->
+                        <div id="buttonOne">
+                            <a href="" id="buttonPlay">
+                                <img src="./img/播放.png" alt="">
+                                <p>播放</p>
+                            </a>
+                            <a href="" id="buttonAdd">+</a>
+                        </div>
+                        <!-- 收藏按钮 -->
+                        <a href="" id="buttonCollect">
+                            <img src="./img/收藏.png" alt="">
+                            <p id="collectCount"></p>
+                        </a>
+                        <!-- 转发按钮 -->
+                        <a href="" id="buttonShare">
+                            <img src="./img/转发.png" alt="">
+                            <p id="ShareCount"></p>
+                        </a>
+                        <!-- 下载按钮 -->
+                        <a href="" id="buttonDownload">
+                            <img src="./img/下载.png" alt="">
+                            <p id="DownloadCount">下载</p>
+                        </a>
+                        <!-- 评论按钮 -->
+                        <a href="" id="buttonTalk">
+                            <img src="./img/评论.png" alt="">
+                            <p id="TalkCount"></p>
+                        </a>
+                    </div>
+                    <!-- 标签 -->
+                    <div id="showTags">
+                        <p>标签：</p>
+                        <a href="" class="showTag"></a>
+                        <a href="" class="showTag"></a>
+                        <a href="" class="showTag"></a>
+                    </div>
+                    <!-- 介绍 -->
+                    <div id="description">
+                        <p>介绍：</p>
+                        <span id="showDesc"></span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="dishShowLists">
+                <header id="showListHeader">
+                    <h1>歌曲列表</h1>
+                    <span id="showListCount"></span>
+                    <a href="" id="showListLink">
+                        <img src="./img/音乐.png" alt="">
+                        <span>生成外链播放器</span>
+                    </a>
+                    <span id="showListsPlayCount">
+                        <p>播放：</p>
+                        <span id="showListPlayCount"></span>
+                    </span>
+                </header>
+                <div id="showListContent">
+                    <ul id="showListContentHeader">
+                        <li></li>
+                        <li>歌曲标题</li>
+                        <li>时长</li>
+                        <li>歌手</li>
+                        <li>专辑</li>
+                    </ul>
+                    <ul id="listContent">
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./歌单展示.js"></script>
+</body>
+</html>
